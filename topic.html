@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Photography Site</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://use.fontawesome.com/fab417e5fd.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/material-photo-gallery.min.js"></script>
+</head>
+
+<body>
+    <section class="navbar-topic">
+        <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="./img/video.mp4" type="video/mp4">Sorry, your browser does not support HTML5 video.
+        </video>
+        <nav>
+            <h1> Shubham's Photography </h1>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./topic.html">Portfolio</a></li>
+                <li><a href="./topic-flexbox.html">Portfolio-Flex</a></li>
+                <li><a href="./topic-grid.html">Portfolio-Grid</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <section class="gallery-section">
+            <h2>Welcome to my Gallery!</h2>
+
+        </section>
+
+        <div>
+            <div class="m-p-g">
+                <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+                    <img src="img/thumbnail-img1.jpg" data-full="img/img1.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img2.jpg" data-full="img/img2.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img3.jpg" data-full="img/img3.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img4.jpg" data-full="img/img4.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img5.jpg" data-full="img/img5.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img6.jpg" data-full="img/img6.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img7.jpg" data-full="img/img7.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img8.jpg" data-full="img/img8.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img9.jpg" data-full="img/img9.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img10.jpg" data-full="img/img10.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img11.jpg" data-full="img/img11.jpg" class="m-p-g__thumbs-img" /> <img
+                        src="img/thumbnail-img12.jpg" data-full="img/img12.jpg" class="m-p-g__thumbs-img" />
+                </div>
+
+                <div class="m-p-g__fullscreen"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>All the images and videos are my own.</p>
+        <p>&copy; 2023 Shubham Deepak Karande | All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    var elem = document.querySelector('.m-p-g');
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var gallery = new MaterialPhotoGallery(elem);
+    });
+</script>
+
+</html>

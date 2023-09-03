@@ -1,0 +1,193 @@
+/*Tested on Google Chrome on Windows 11*/
+/*Everything works as intended*/
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+header {
+  background-color: rgb(179, 199, 237);
+  padding: 20px;
+  text-align: center;
+}
+
+nav li {
+  list-style: none;
+  margin: 0px 5px;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #003b6f;
+  transition: all 0.2s ease-out;
+  color: #ffffff;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+aside {
+  background-color: #f5f5f5;
+  width: 190px;
+}
+
+aside h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style-type: decimal;
+}
+
+aside ul li {
+  padding: 2px 2px 2px 2px;
+}
+
+main h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery-images-vertical {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+}
+.gallery-images-vertical img {
+  max-width: 99%;
+  height: auto;
+  padding: 20px 20px 20px 20px;
+}
+.gallery-images img {
+  max-width: 75%;
+  height: 30%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+footer {
+  background-color: rgb(179, 199, 237);
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* Mobile Layout */
+@media screen and (max-width: 799px) {
+  * {
+    margin: 0;
+  }
+  header {
+    background-color: rgb(179, 199, 237);
+    padding: 5px;
+    width: 100%;
+  }
+  nav li {
+    display: flex; /* using flex layout in navbar in which is a grid */
+    list-style: none;
+    margin: 0px 5px;
+    justify-content: center;
+  }
+
+  aside {
+    width: auto;
+    background-color: #ddd;
+  }
+  aside ul li {
+    font-size: 12px;
+    justify-content: center;
+  }
+
+  /* I have tried to fix the sidebar below the navbar in Mobile view using the container div and aside tag*/
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside ul li {
+    font-size: 12px;
+    width: auto;
+    margin-top: 3px;
+    font-weight: bold;
+  }
+
+  .aside li {
+    padding-top: 2px;
+  }
+
+  .gallery-images-vertical {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+  .gallery-images-vertical img {
+    max-width: 95%;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+  }
+  .gallery-images img {
+    max-width: 90%;
+    height: 80%;
+    padding: 5px 5px 5px 5px;
+  }
+  .header,
+  .hero,
+  .sidebar,
+  .footer {
+    width: auto;
+  }
+}
+
+/* Tablet Layout */
+@media (min-width: 800px) and (max-width: 1199px) {
+  .gallery-images-vertical {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery-images-vertical img {
+    max-width: 90%;
+    height: auto;
+    margin: 5px 5px 5px 5px;
+  }
+  .gallery-images img {
+    max-width: 80%;
+    height: 30%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    height: auto;
+  }
+  aside ul li {
+    font-size: 14px;
+    width: auto;
+    margin-top: 3px;
+    font-weight: bold;
+  }
+}
