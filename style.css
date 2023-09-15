@@ -27,6 +27,7 @@
 }
 
 .navbar-topic {
+  display: flex;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -168,8 +169,6 @@ footer {
 
 #videobcg {
   position: absolute;
-  top: 0;
-  left: 0;
   min-width: 100%;
   min-height: 100%;
   height: auto;
@@ -400,10 +399,24 @@ footer {
 
 /* Mobile Layout */
 @media screen and (max-width: 799px) {
+  .navbar-topic {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+  }
+
+  video {
+    position: absolute;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
   header {
     background-color: rgb(179, 199, 237);
     padding: 5px;
   }
+
   nav li {
     display: flex;
     list-style: none;
@@ -475,7 +488,13 @@ footer {
     margin-right: 10px;
     margin-bottom: 10px;
   }
+
   .footer {
     height: auto;
+  }
+
+  video {
+    width: 80% !important;
+    height: auto !important;
   }
 }
