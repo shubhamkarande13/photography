@@ -397,3 +397,85 @@ body {
 footer {
   margin-top: auto;
 }
+
+/* Mobile Layout */
+@media screen and (max-width: 799px) {
+  header {
+    background-color: rgb(179, 199, 237);
+    padding: 5px;
+  }
+  nav li {
+    display: flex;
+    list-style: none;
+    margin: 0px 5px;
+    justify-content: center;
+  }
+
+  /* I have tried to fix the sidebar after the navbar in Mobile view using the container div and aside tag*/
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside ul li {
+    font-size: 12px;
+    width: auto;
+    margin-top: 3px;
+    font-weight: bold;
+  }
+
+  .aside li {
+    padding-top: 2px;
+  }
+
+  .gallery-section {
+    margin-bottom: 20px;
+  }
+
+  .gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-images img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .gallery-images-vertical img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .header,
+  .hero,
+  .sidebar,
+  .footer {
+    width: 100%;
+  }
+}
+
+/* Tablet Layout */
+@media (min-width: 800px) and (max-width: 1199px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .gallery-images img {
+    max-width: auto;
+    height: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .gallery-images-vertical img {
+    max-width: 30%;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .footer {
+    height: auto;
+  }
+}
